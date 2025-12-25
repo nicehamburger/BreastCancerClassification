@@ -72,7 +72,7 @@ pip install numpy pandas matplotlib scikit-learn ucimlrepo
 ## Conclusion
 - Both 5-fold and 10-fold cross-validation yield high and consistent performance
 - The 5-fold model with k = 8 is preferred due to:
-- - Higher F1-score
+  - Higher F1-score
   - Lower standard deviation
   - Better robustness and reliability
 - Given the sensitive nature of medical classification tasks, statistical evaluation must be complemented with domain expertise and human interpretation before real-world deployment.
