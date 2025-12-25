@@ -23,8 +23,6 @@ pip install numpy pandas matplotlib scikit-learn ucimlrepo
 
 ## Project Pipeline Overview
 
-This project follows a systematic **end-to-end machine learning pipeline** to build, evaluate, and validate a k-Nearest Neighbors (k-NN) classifier for breast cancer diagnosis.
-
 ### 1. Data Ingestion
 - The Breast Cancer Wisconsin (Diagnostic) dataset is fetched directly from the **UCI Machine Learning Repository**.
 - Non-informative identifier attributes are removed to prevent bias in model learning.
@@ -70,4 +68,16 @@ This project follows a systematic **end-to-end machine learning pipeline** to bu
 - The optimal k-NN model is selected based on:
   - Highest mean F1-score
   - Lowest performance variance across folds
-- Model stability and reliability are emphasized due to the medical context.
+
+## Conclusion
+- Both 5-fold and 10-fold cross-validation yield high and consistent performance
+- The 5-fold model with k = 8 is preferred due to:
+- - Higher F1-score
+  - Lower standard deviation
+  - Better robustness and reliability
+- Given the sensitive nature of medical classification tasks, statistical evaluation must be complemented with domain expertise and human interpretation before real-world deployment.
+
+## Key Takeaways
+- k-NN performs exceptionally well on normalized biomedical data
+- Stratification is critical for reliable evaluation
+- Cross-validation provides a more robust estimate than a single train-test split
